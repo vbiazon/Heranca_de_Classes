@@ -15,84 +15,63 @@ using namespace std;
 
 int main()
 {
+	try {
+		Lista L1;
+		cout << "Teste da Lista: " << endl;
+		L1.InsereInicio(1);
+		L1.InsereFinal(2);
+		L1.InsereFinal(3);
+		L1.InsereFinal(4);
+		L1.InsereFinal(5);
+		L1.InsereFinal(6);
+		cout << "Retirado do inicio: " << L1.RetiraInicio() << endl;
+		cout << "Retirado do final: " << L1.RetiraFinal() << endl;
+		L1.Imprimir();
 
-	Lista L1;
-	
-	L1.InsereInicio(1);
-	L1.InsereFinal(2);
-	L1.InsereFinal(3);
-	L1.InsereFinal(4);
-	L1.InsereFinal(5);
-	L1.InsereFinal(6);
-	L1.RetiraInicio();
-	L1.RetiraFinal();
-	L1.Imprimir();
+		Pilha P1;
+		cout << endl << "Teste da Pilha: " << endl;
+		P1.Push(1);
+		P1.Push(2);
+		P1.Push(3);
+		P1.Push(4);
+		cout << "Retirado: "<< P1.Pop() << endl;
+		cout << "Retirado: " << P1.Pop() << endl;
+		cout << "Retirado: " << P1.Pop() << endl;
+		cout << "Elemento no topo: " << P1.Top() << endl;
+		cout << "Retirado: " << P1.Pop() << endl;
+		P1.Push(1);
+		P1.Push(2);
+		P1.Push(3);
+		P1.Push(4);
+		cout << "Retirado: " << P1.Pop() << endl;
+		P1.Push(5);
+		P1.Imprimir();
 
-	Pilha P1;
-
-	P1.Push(1);
-	P1.Push(2);
-	P1.Push(3);
-	P1.Push(4);
-	cout << P1.Pop() << endl;
-	cout << P1.Pop() << endl;
-
-
-	P1.Push(1);
-	P1.Push(2);
-	P1.Push(3);
-	P1.Push(4);
-	cout << P1.Pop() << endl;
-	P1.Push(5);
-	P1.Imprimir();
-
-	Fila F1;
-	cout << endl << "Fila" << endl;
-	F1.Enqueue(1);
-	F1.Enqueue(2);
-	F1.Enqueue(3);
-	F1.Enqueue(4);
-	F1.Enqueue(5);
-	F1.Enqueue(6);
-	cout << F1.Dequeue() << endl;
-	cout << F1.Dequeue() << endl;
-	cout << F1.Dequeue() << endl;
-	cout << F1.Front() << endl;
-	cout << F1.Dequeue() << endl;
-
-
-
-	/*Elemento* n;
-	Elemento* h;
-	Elemento* t;
-	Elemento* pnt;
-
-	n = new Elemento;
-	t = n;
-	h = n;
-	n->valor = 1;
-
-	n = new Elemento;
-	t->proximo = n;
-	n->valor = 2;
-	t = n;
-
-	n = new Elemento;
-	t->proximo = n;
-	n->valor = 3;
-	t = n;
-
-	n = new Elemento;
-	t->proximo = n;
-	n->valor = 4;
-	t = n;
-
-	pnt = h;
-	while (pnt->proximo != NULL)  {
-		cout << pnt->valor << endl;
-		pnt = pnt->proximo;
+		Fila F1;
+		cout << endl << "Teste da Fila" << endl;
+		F1.Enqueue(1);
+		F1.Enqueue(2);
+		F1.Enqueue(3);
+		F1.Enqueue(4);
+		F1.Enqueue(5);
+		F1.Enqueue(6);
+		cout << "Retirado: " << F1.Dequeue() << endl;
+		cout << "Retirado: " << F1.Dequeue() << endl;
+		cout << "Retirado: " << F1.Dequeue() << endl;
+		cout << "Elemento na frente: " << F1.Front() << endl;
+		cout << "Retirado: " << F1.Dequeue() << endl;
+		F1.Enqueue(2);
+		F1.Enqueue(3);
+		F1.Enqueue(4);
+		F1.Enqueue(5);
+		F1.Imprimir();
 	}
-	cout << pnt->valor << endl;*/
+
+catch (const exception exc){
+	cout << "Ocorreu um erro!" << endl;
+	cerr << exc.what() << endl;
+}
+
 	int x;
 	cin >> x;
 }

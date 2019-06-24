@@ -7,6 +7,7 @@ public:
 	~Pilha(); // Destrutor
 	void Push(int x); // Empilha valor na pilha criada
 	int Pop(void); // Desempilha valor da pilha criada
+	int Top(void); // Mostra o valor no topo da pilha
 
 };
 

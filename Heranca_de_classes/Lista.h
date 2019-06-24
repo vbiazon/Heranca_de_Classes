@@ -4,8 +4,8 @@
 class Lista
 {
 public:
-	Lista();
-	~Lista();
+	Lista(); //Construtor
+	~Lista(); //Destrutor
 	void InsereFinal(int x); //Insere elemento no final da lista
 	void InsereInicio(int x);// Insere elemento no inicio da lista
 	int RetiraFinal(); //Retira elemento do final da lista
